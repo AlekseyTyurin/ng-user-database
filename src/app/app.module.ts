@@ -1,23 +1,22 @@
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
 import {AppComponent} from "./app.component";
-import {UserListComponent} from "./user-list/user-list.component";
-import {UserDetailsComponent} from "./user-details/user-details.component";
-import {UserService} from "./services/user.service";
 import {HttpModule} from "@angular/http";
+import {UsersModule} from "./users/users.module";
+import {appRouting} from "./app-routing.module";
+
 
 @NgModule({
     declarations: [
-        AppComponent,
-        UserListComponent,
-        UserDetailsComponent
+        AppComponent
     ],
     imports: [
         BrowserModule,
-        HttpModule
+        HttpModule,
+        UsersModule,
+        appRouting
     ],
     providers: [
-        UserService
     ],
     bootstrap: [AppComponent]
 })
